@@ -1,6 +1,6 @@
 import { Avatar, Box, Button, ButtonGroup, Fab, Modal, Stack, styled, TextField, Tooltip, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import { Add as AddIcon, DateRange, DateRangeOutlined, EmojiEmotions, Image, PersonAdd, VideoCameraBack } from '@mui/icons-material';
+import { Add as AddIcon, DateRange, EmojiEmotions, Image, PersonAdd, VideoCameraBack } from '@mui/icons-material';
 
 const StyledModal = styled(Modal)({
   display: 'flex',
@@ -39,7 +39,7 @@ const Add = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box width={400} height={200} bgcolor='white' p={3} borderRadius={5}>
+        <Box bgcolor={'Background.default'} color={'text.primary'} width={400} height={200} background='white' p={3} borderRadius={5}>
           <Typography variiiant='h6' color='gray' textAlign='center'>Create post</Typography>
           <UserBox>
             <Avatar src='' sx={{ width: 30, height: 30}}></Avatar>
@@ -59,9 +59,9 @@ const Add = () => {
               <VideoCameraBack color='success'/>
               <PersonAdd color='error'/>
             </Stack>
-            <ButtonGroup variant="contained" aria-label="outlined primary button group">
+            <ButtonGroup fullWidth variant="contained" aria-label="outlined primary button group">
               <Button>Post</Button>
-              <Button><DateRange/></Button>
+              <Button sx={{width: '100px'}}><DateRange/></Button>
             </ButtonGroup>
         </Box>
       </StyledModal>
